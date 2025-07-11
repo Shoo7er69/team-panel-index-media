@@ -15,23 +15,54 @@ body {
             animation: fadeIn 1.4s ease-out forwards;
             }
 
-            /* === Button Hover === */
-            a.button,
+            /* === Button + Link Hover === */
+            a,
             button {
               transition: all 0.3s ease-in-out;
               }
 
-              /* === Custom Scrollbar === */
-              ::-webkit-scrollbar {
-                width: 8px;
+              a:hover,
+              button:hover {
+                opacity: 0.9;
                 }
-                ::-webkit-scrollbar-track {
-                  background: #0a0a0a;
-                  }
-                  ::-webkit-scrollbar-thumb {
-                    background: #58a6ff;
-                      border-radius: 4px;
-                      }
-                      ::-webkit-scrollbar-thumb:hover {
-                        background: #7b47ff;
-                        }
+
+                /* === Card Styling (glass effect) === */
+                .bg-glass {
+                  background: rgba(255, 255, 255, 0.05);
+                    backdrop-filter: blur(10px);
+                      border: 1px solid rgba(255, 255, 255, 0.08);
+                        border-radius: 12px;
+                          padding: 1.5rem;
+                            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+                            }
+
+                            /* === Scrollbar === */
+                            ::-webkit-scrollbar {
+                              width: 8px;
+                              }
+                              ::-webkit-scrollbar-track {
+                                background: #0a0a0a;
+                                }
+                                ::-webkit-scrollbar-thumb {
+                                  background: #58a6ff;
+                                    border-radius: 4px;
+                                    }
+                                    ::-webkit-scrollbar-thumb:hover {
+                                      background: #7b47ff;
+                                      }
+
+                                      /* === Checkmark Submit Button Animation === */
+                                      #submitBtn svg {
+                                        animation: tickDrop 0.4s ease-in-out;
+                                        }
+
+                                        @keyframes tickDrop {
+                                          0% {
+                                              transform: scale(0) rotate(45deg);
+                                                  opacity: 0;
+                                                    }
+                                                      100% {
+                                                          transform: scale(1) rotate(0deg);
+                                                              opacity: 1;
+                                                                }
+                                                                }
